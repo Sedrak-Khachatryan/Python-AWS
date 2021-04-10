@@ -8,13 +8,11 @@ ec2 = boto3.resource('ec2')
 vpc = ec2.create_vpc(CidrBlock='192.168.0.0/16')
 vpc.create_tags(Tags=[{"Key": "Name", "Value": "default_vpc"}])
 vpc.wait_until_available()
-print(vpc.id)
 
 
 # Create then attach internet gateway
 ig = ec2.create_internet_gateway()
 vpc.attach_internet_gateway(InternetGatewayId=ig.id)
-print(ig.id)
 
 
 # Create a route table and a public route
@@ -23,7 +21,6 @@ route = route_table.create_route(
     DestinationCidrBlock='0.0.0.0/0',
     GatewayId=ig.id
     )
-print(route_table.id)
 
 
 # Create Subnet
