@@ -1,0 +1,5 @@
+{'VPC_ID': 'vpc-0489222b6da7d7897',
+ 'Internet_Gateway_Id': 'igw-06e2f750964d4c541',
+ 'Route_Table_Id': 'rtb-01f4c586464a27679',
+ 'Security_Group_Id': 'sg-0cca94863ac72288e',
+ 'Instance_Id': 'i-02e1f56823f0cbdc8'}
